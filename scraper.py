@@ -51,9 +51,6 @@ def book_crawler(url: str):
         else:
             nxt_url = None
 
-
-
-
 def file_writer(filename, data_stream):
     try:
         with open(filename, "w", encoding="utf-8") as fp:
@@ -66,7 +63,6 @@ def file_writer(filename, data_stream):
     except Exception as e:
         print(f"Error {e}")
         return False
-
 
 if __name__ == "__main__":
     gen_obj = book_crawler("https://books.toscrape.com")
