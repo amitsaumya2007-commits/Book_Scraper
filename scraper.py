@@ -28,9 +28,9 @@ def book_crawler(url: str):
             break
         time.sleep(1)
 
-        html = resp.content
+        resp_html = resp.content
         
-        soup = bs(html,"html.parser")
+        soup = bs(resp_html,"html.parser")
         for book in soup.select("li.col-xs-6.col-sm-4.col-md-3.col-lg-3"):
             title_element = book.select_one("h3 > a ")
             if title_element:
